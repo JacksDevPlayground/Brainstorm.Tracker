@@ -1,0 +1,44 @@
+name: 💡 New Idea
+description: Create a new brainstorming idea
+title: "💡 Idea: {{ THE IDEA NAME }} "
+labels: ["Brainstorming Idea"]
+body:
+  - type: textarea
+    id: pain
+    attributes:
+      label: ❌ The Pain
+      placeholder: |
+        The pain of the problem we are trying to solve
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 🥅 The Goal
+      placeholder: |
+        The goal of the brainstorming session?
+    validations:
+      required: true   
+  - type: dropdown
+    id: poc
+    attributes:
+      label: 🔨 PoC - Should we create a software proof of concept?
+      options: [ "Yes - It's probably worth it", "Not sure yet", "No - It's better to just come up with ideas/solutions" ]
+    validations:
+      required: true
+  - type: textarea
+    id: ideas
+    attributes:
+      label: 💡 Potential Solutions (or thoughts)
+      placeholder: |
+        Any ideas that we have already thought of or which need expanding upon
+    validations:
+      required: true
+  - type: textarea
+    id: checked-by
+    attributes:
+      label: 🔎 Checked by
+      placeholder: |
+        @ mention the person who checked your idea
+    validations:
+      required: true
